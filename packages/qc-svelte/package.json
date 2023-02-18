@@ -1,6 +1,6 @@
 {
-  "name": "@centella/svelte-qc",
-  "description": "Internal ",
+  "name": "@centella/qc-svelte",
+  "description": "Internal quality control tool packages for svelte",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

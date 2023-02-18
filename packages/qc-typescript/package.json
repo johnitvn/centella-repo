@@ -1,7 +1,7 @@
 {
-  "name": "@centella/qc",
+  "name": "@centella/qc-typescript",
   "version": "1.0.0",
-  "description": "Internal quality control tool packages",
+  "description": "Internal quality control tool packages for typescript",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
