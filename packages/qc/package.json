@@ -5,6 +5,7 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
+    "@commitlint/config-conventional": "^17.4.4",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "commitlint": "^17.4.4",
