@@ -1,7 +1,5 @@
 /**
  * @type {import("eslint").Linter.Config}
  */
-const eslint = {
-
-};
+const eslint = {};
 module.exports = eslint;
