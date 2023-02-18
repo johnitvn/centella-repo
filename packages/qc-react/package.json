@@ -1,0 +1,13 @@
+{
+  "name": "@centella/qc-react",
+  "description": "Internal quality control tool packages for svelte",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@centella/qc-typescipt": "*"
+  },
+  "lint-staged": {
+    "!./**/*": ""
+  }
+}
