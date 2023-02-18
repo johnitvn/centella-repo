@@ -1,0 +1,13 @@
+{
+  "name": "@centella/svelte-qc",
+  "description": "Internal ",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@centella/qc": "*"
+  },
+  "lint-staged": {
+    "!./**/*": ""
+  }
+}

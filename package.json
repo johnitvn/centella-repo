@@ -1,0 +1,19 @@
+{
+  "name": "svelte-blog",
+  "version": "1.0.0",
+  "private": "true",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "./packages/*",
+    "./sites/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "lerna exec lint-staged",
+    "pretty": "lerna exec -- pretty-quick --staged'"
+  },
+  "devDependencies": {
+    "lerna": "^6.0.3"
+  }
+}
