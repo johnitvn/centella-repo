@@ -11,4 +11,4 @@ const eslint = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
   ],
 };
-module.exports = { eslint };
+module.exports = eslint;

@@ -2,8 +2,14 @@
  * @type {import("eslint").Linter.Config}
  */
 const eslint = {
-    extends: [
-        "@centella/qc",
+    "plugins": [
+        "svelte3"
     ],
+    "overrides": [
+        {
+            "files": ["*.svelte"],
+            "processor": "svelte3/svelte3"
+        }
+    ]
 }
-module.exports = { eslint }
+module.exports = eslint
