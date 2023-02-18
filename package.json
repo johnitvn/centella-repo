@@ -9,7 +9,6 @@
     "./sites/*"
   ],
   "scripts": {
-    "preinstall": "lerna bootstrap --include-dependencies",
     "prepare": "husky install",
     "lint": "lerna exec lint-staged",
     "pretty": "lerna exec -- pretty-quick --staged'"
