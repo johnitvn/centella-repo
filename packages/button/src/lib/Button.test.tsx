@@ -5,6 +5,7 @@ import {Theme, ThemeProvider} from "@centella/react-tw-core";
 import {render} from "@testing-library/react";
 import {ReactNode} from "react";
 import {themeMock} from "../../../themeMock";
+import React from "react";
 
 const renderWithTheme = (elm: ReactNode) => render(<ThemeProvider theme={themeMock as Theme}> {elm} </ThemeProvider>);
 

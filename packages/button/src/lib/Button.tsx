@@ -15,13 +15,17 @@ export type ButtonProps = HtmlHTMLAttributes<HTMLButtonElement | HTMLLinkElement
 };
 
 export const Button: FC<ButtonProps> = ({as, color, role, size, rounded, shadow, disabled, ...rest}) => {
+  const theme = useContext(ThemeContext);
+  if (!theme.button) {
+    throw new Error("Have no theme config for button");
+  }
+
   const handleClick = () => {
     if (!disabled && rest.onClick) {
       rest.onClick();
     }
   };
 
-  const theme = useContext(ThemeContext);
   const classNames = classMerge(
     theme.button.baseClassName,
     theme.button.rounded[rounded ?? "md"],

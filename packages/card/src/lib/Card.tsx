@@ -1,11 +1,5 @@
 import {FC, HtmlHTMLAttributes, useContext} from "react";
 import {classMerge, SizingSchema, ThemeContext} from "@centella/react-tw-core";
-import {Theme, ThemeProvider} from "@centella/react-tw-core";
-import {render} from "@testing-library/react";
-import {ReactNode} from "react";
-import {themeMock} from "../../../themeMock";
-
-const renderWithTheme = (elm: ReactNode) => render(<ThemeProvider theme={themeMock as Theme}> {elm} </ThemeProvider>);
 
 export type CardProps = HtmlHTMLAttributes<HTMLElement> & {
   size?: SizingSchema;
@@ -15,6 +9,9 @@ export type CardProps = HtmlHTMLAttributes<HTMLElement> & {
 
 export const Card: FC<CardProps> = ({role, size, rounded, shadow, ...rest}) => {
   const theme = useContext(ThemeContext);
+  if (!theme.card) {
+    throw new Error("Have no theme config for card component");
+  }
   const classNames = classMerge(
     theme.card.baseClassName,
     theme.card.rounded[rounded ?? "md"],

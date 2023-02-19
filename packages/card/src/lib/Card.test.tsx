@@ -1,6 +1,7 @@
-import {classMerge, ColorSchema, SizingSchema, RoundedSchema} from "@centella/react-tw-core";
+import {classMerge, SizingSchema, RoundedSchema} from "@centella/react-tw-core";
 import {Theme, ThemeProvider} from "@centella/react-tw-core";
 import {render} from "@testing-library/react";
+import React from "react";
 import {ReactNode} from "react";
 import {themeMock} from "../../../themeMock";
 import {Card} from "./Card";
