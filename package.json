@@ -10,10 +10,18 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "lint": "lerna exec lint-staged",
-    "pretty": "lerna exec -- pretty-quick --staged'"
+    "build": "lerna exec build",
+    "test": "lerna run test --stream --no-prefix --parallel --no-bail --reject-cycles",
+    "git:clean": "git clean -xdfq",
+    "check update": "lerna exec ncu",
+    "upgrade": "lerna exec ncu -u && yarn install"
   },
   "devDependencies": {
+    "commitlint": "^17.4.4",
+    "husky": "^8.0.3",
     "lerna": "^6.0.3"
+  },
+  "lint-staged": {
+    "**/*.ts{x}": "eslint ."
   }
 }
