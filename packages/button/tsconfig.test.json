@@ -1,0 +1,12 @@
+{
+  "exclude": ["./tsconfig.json"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["node", "jest", "@testing-library/jest-dom"]
+  },
+  "include": ["./src/**/*.test.ts", "jest.config.ts", "jest.setup.ts", "../themeMock.ts"]
+}
