@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "peerDependencies": {
-    "@centella/react-core": "*",
+    "@centella/react-tw-core": "*",
     "@centella/react-tw-card": "*",
     "@centella/react-tw-button": "*",
     "react": "18.2.0",
