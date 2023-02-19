@@ -10,10 +10,10 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "build": "lerna exec build",
+    "build": "lerna run build",
     "test": "lerna run test --stream --no-prefix --parallel --no-bail --reject-cycles",
     "git:clean": "git clean -xdfq",
-    "check update": "lerna exec ncu",
+    "checkupdate": "lerna exec ncu --stream",
     "upgrade": "lerna exec ncu -u && yarn install"
   },
   "devDependencies": {
