@@ -1,5 +1,6 @@
+import {Button} from "@centella/react-tw-button";
 import {Card} from "@centella/react-tw-card";
-import {ThemeContext} from "@centella/react-tw-core";
+import {ThemeConsumer, ThemeProvider} from "@centella/react-tw-core";
 import {NavBar} from "../components/Navbar";
 import {Page} from "../components/Page";
 import {Sidebar} from "../components/Sidebar";
@@ -7,7 +8,13 @@ import {theme} from "../theme";
 
 export default function Home() {
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeProvider value={theme}>
+      {/* <ThemeConsumer>
+        {(context) => {
+          console.log(context);
+          return <></>;
+        }}
+      </ThemeConsumer> */}
       <Page>
         <NavBar />
 
@@ -15,10 +22,10 @@ export default function Home() {
           <Sidebar />
 
           <main>
-            <Card></Card>
+            <Button></Button>
           </main>
         </div>
       </Page>
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 }

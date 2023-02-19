@@ -9,6 +9,7 @@ export type CardProps = HtmlHTMLAttributes<HTMLElement> & {
 
 export const Card: FC<CardProps> = ({role, size, rounded, shadow, ...rest}) => {
   const theme = useContext(ThemeContext);
+  console.log(theme);
   if (!theme.card) {
     throw new Error("Have no theme config for card component");
   }

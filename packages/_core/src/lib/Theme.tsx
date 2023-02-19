@@ -42,6 +42,9 @@ export type ThemeProviderProps = {
   children: ReactNode | ReactNode[];
 };
 
-export const ThemeContext = createContext<Theme>({} as unknown as Theme);
+const ThemeContext = createContext<Theme>({} as unknown as Theme);
+ThemeContext.displayName = "Centella";
 export const ThemeProvider = ThemeContext.Provider;
 export const ThemeConsumer = ThemeContext.Consumer;
+
+export {ThemeContext};
