@@ -13,14 +13,14 @@
     "build": "lerna run build",
     "test": "lerna run test --stream --no-prefix --parallel --no-bail --reject-cycles",
     "git:clean": "git clean -xdfq",
-    "checkupdate": "lerna exec ncu --stream",
-    "upgrade": "lerna exec ncu -u && yarn install"
+    "update:check": "lerna exec ncu --stream && ncu",
+    "update:do": "lerna exec ncu -- -u && ncu -u && yarn install"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.4.4",
     "commitlint": "^17.4.4",
     "husky": "^8.0.3",
-    "lerna": "^6.0.3"
+    "lerna": "^6.5.1"
   },
   "lint-staged": {
     "**/*.ts{x}": "eslint ."
