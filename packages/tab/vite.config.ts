@@ -5,7 +5,7 @@ import path from 'node:path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({ insertTypesEntry: true, })],
+  plugins: [react(), dts()],
   build: {
     sourcemap: true,
     lib: {

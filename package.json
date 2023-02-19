@@ -1,5 +1,5 @@
 {
-  "name": "svelte-blog",
+  "name": "@centella/centella",
   "version": "1.0.0",
   "private": "true",
   "main": "index.js",
@@ -15,6 +15,10 @@
     "git:clean": "git clean -xdfq",
     "update:check": "lerna exec ncu --stream && ncu",
     "update:do": "lerna exec ncu -- -u && ncu -u && yarn install"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.4.4",

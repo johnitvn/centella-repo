@@ -6,7 +6,7 @@ import {ReactNode} from "react";
 import {themeMock} from "../../../themeMock";
 import {Card} from "./Card";
 
-const renderWithTheme = (elm: ReactNode) => render(<ThemeProvider theme={themeMock as Theme}> {elm} </ThemeProvider>);
+const renderWithTheme = (elm: ReactNode) => render(<ThemeProvider value={themeMock as Theme}> {elm} </ThemeProvider>);
 
 describe.only("Card Component", () => {
   test("renders default card", () => {

@@ -5,7 +5,7 @@ import path from 'node:path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [react(), dts({ insertTypesEntry: true, })],
   build: {
     sourcemap: true,
     lib: {
@@ -13,6 +13,15 @@ export default defineConfig({
       name: 'MyLib',
       formats: ['es', 'umd'],
       fileName: (format) => `${format}.js`,
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          'react': 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
     },
   }
 })

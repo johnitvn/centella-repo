@@ -1,4 +1,4 @@
-import {createContext, FC, ReactNode} from "react";
+import {createContext, FC, ReactNode, useContext} from "react";
 
 export type ColorSchema = "primary" | "secondary" | "success" | "warning" | "danger" | "info" | "default";
 export type SizingSchema = "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
@@ -43,8 +43,5 @@ export type ThemeProviderProps = {
 };
 
 export const ThemeContext = createContext<Theme>({} as unknown as Theme);
-const ThemeProvider: FC<ThemeProviderProps> = ({theme, children}: ThemeProviderProps) => (
-  <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
-);
-ThemeProvider.displayName = "CentellaTheme";
-export {ThemeProvider};
+export const ThemeProvider = ThemeContext.Provider;
+export const ThemeConsumer = ThemeContext.Consumer;
