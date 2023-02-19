@@ -21,10 +21,20 @@ export type ButtonOptions = BaseClassNameOptions &
   RoundedOptions &
   ColorWithDisabledOptions;
 export type CardOptions = BaseClassNameOptions & ShadowOptions & RoundedOptions & ColorOptions;
+export type TabOptions = BaseClassNameOptions & {
+  role: {
+    container: string;
+    tabTrigger: string;
+    tabTriggers: string;
+    tabPanels: string;
+    tabPanel: string;
+  };
+};
 
 export type Theme = {
-  button: ButtonOptions;
-  card: CardOptions;
+  button?: ButtonOptions;
+  card?: CardOptions;
+  tab?: TabOptions;
 };
 
 export type ThemeProviderProps = {
